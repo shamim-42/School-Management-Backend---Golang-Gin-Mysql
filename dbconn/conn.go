@@ -6,6 +6,7 @@ import (
 )
 
 func SetupConnection() *gorm.DB {
+	// dsn := "shamim:PASSWORD!@tcp(127.0.0.1:3306)/go_gorm_mysql?charset=utf8mb4&parseTime=True&loc=Local"
 	dsn := "shamim:PASSWORD!@tcp(127.0.0.1:3306)/go_gorm_mysql?charset=utf8mb4&parseTime=True&loc=Local"
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	_ = err
